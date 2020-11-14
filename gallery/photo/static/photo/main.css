@@ -1,0 +1,75 @@
+body{
+    overflow-x: hidden;
+}
+.navbar{
+    width: 100%;
+}
+.navbar-brand img {
+  width: 40px;
+  height: 30px;
+  object-fit: cover;
+}
+.main {
+  width: 200%;
+}
+.main ::placeholder {
+  font-size: 14px;
+}
+.main input:focus {
+  outline: none !important;
+}
+.has-search .form-control {
+  padding-left: 3rem;
+  border-radius: 30px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+  width: 250px;
+}
+.search-box .search-box__input {
+  outline: none;
+  background:white;
+  border: solid 1px rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  padding: 7px 14px 7px 40px;
+  width: 0%;
+  font-size: 13px;
+  color: black;
+  opacity: 0;
+  transition: ease width 1s, ease opacity 1s;
+  float: right;
+}
+.search-box .search-box__icon {
+  position: absolute;
+  top: 7px;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  right: 12px;
+  transition: ease transform 1s;
+  transition-delay: 50ms;
+  font-size: 20px;
+}
+.search-box.active .search-box__icon {
+  transform: translateX(-214px);
+}
+.search-box.active .search-box__input {
+  opacity: 1;
+  width: 100%;
+}
