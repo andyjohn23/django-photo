@@ -117,3 +117,21 @@ body{
     display: inline-block;
     width: 550px;
 }
+.gallery{
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 3;
+    column-gap: 20px;
+}
+.gallery .box img{
+    width: 600px;
+    max-width: 100%;
+    object-fit: cover;
+}
+.gallery .box{
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 5px;
+    overflow: hidden;
+    break-inside: avoid;
+}
