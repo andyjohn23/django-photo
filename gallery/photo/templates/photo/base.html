@@ -19,8 +19,8 @@
 </head>
 
 <body>
-    <header class="site-header container-fluid" style="padding: 0px;margin: 0px;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid" style="padding: 0px;margin: 0px;">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/">
                 <img src="/static/photo/images/logo.png" alt="logo">
                 <span>Photo-board</span>
@@ -35,7 +35,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Wallpapers</a>
                     </li>
@@ -63,12 +63,13 @@
                         <a class="nav-link" href="#">Film</a>
                     </li>
                 </ul>
-                <div class="search-box"><i class="fa fa-search search-box__icon"></i>
+                <div class="search-box">
+                    <i class="fa fa-search search-box__icon"></i>
                     <input class="search-box__input" placeholder="Search free photos" />
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
 
     {% block content %} {% endblock %}
 
