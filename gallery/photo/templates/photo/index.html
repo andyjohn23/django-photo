@@ -24,44 +24,11 @@
     </div>
 
     <div class="container-fluid gallery">
+        {% for photo in pics %}
         <div class="box">
-            <img src="static/photo/images/photo1.jpg" alt="photo">
+            <img src="{{photo.image.url}}" alt="photo">
         </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo2.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo3.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo4.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo5.jpg" alt="photo">
-        </div>
-        <div class="box">
-            <img src="static/photo/images/photo6.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo7.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo8.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo9.jpg" alt="photo">
-        </div>
-
-        <div class="box">
-            <img src="static/photo/images/photo10.jpg" alt="photo">
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock content %}
