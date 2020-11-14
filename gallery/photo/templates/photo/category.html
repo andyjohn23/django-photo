@@ -1,0 +1,14 @@
+{% extends "photo/base.html" %}
+
+{% block content %}
+
+<h1 style="margin-top: 5%; color: black;">{{ catlist.cat }}</h1>
+<div class="container-fluid gallery">
+    {% for photo in catlist.images %}
+    <div class="box">
+        <img src="{{photo.image.url}}" alt="photo">
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
