@@ -33,34 +33,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto  main-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Wallpapers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nature</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">People</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fashion</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Technology</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Health</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Film</a>
+                    <li class="nav-item cat-link">
+                        {% for categorys in category %}
+                        <a class="nav-link" href="/category/{{ categorys.name}}">
+                            {{ categorys.name|capfirst }}
+                        </a>
+                        {% endfor %}
                     </li>
                 </ul>
                 <div class="search-box">

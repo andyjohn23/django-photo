@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from .models import Image
+from .models import Image, Category
 from django.views.generic import ListView
 
 # Create your views here.
@@ -18,6 +18,14 @@ class CategoryListView(ListView):
     def get_queryset(self):
         content = {
             'cat':self.kwargs['category'],
+            'description':self.kwargs['category'],
             'images':Image.objects.filter(category__name=self.kwargs['category'])
         }
         return content
+
+def category(request):
+    category = Category.objects.exclude(name='Default')
+    context = {
+        'category':category,
+    }
+    return context

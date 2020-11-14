@@ -135,3 +135,21 @@ body{
     overflow: hidden;
     break-inside: avoid;
 }
+.category{
+    margin-top: 7rem;
+    margin-left: 1rem;
+}
+.category h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.category p{
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.cat-link{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

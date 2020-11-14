@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<h1 style="margin-top: 5%; color: black;">{{ catlist.cat }}</h1>
+<div class="category">
+    <h1>{{ catlist.cat |capfirst }}</h1>
+    <P>{{ catlist.description |capfirst }}</P>
+</div>
 <div class="container-fluid gallery">
     {% for photo in catlist.images %}
     <div class="box">
