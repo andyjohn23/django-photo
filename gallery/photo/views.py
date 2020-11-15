@@ -37,6 +37,7 @@ def image_search(request):
         form = ImageSearchForm(request.GET)
         if form.is_valid():
             q = form.cleaned_data['q']
-            results = Image.objects.filter(title__contains=q)
+            
+            results = Image.objects.filter(title__search=q)
 
     return render(request, 'photo/search.html', {'form':form, 'q':q, 'results':results})

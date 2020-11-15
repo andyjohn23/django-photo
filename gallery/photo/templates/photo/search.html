@@ -4,7 +4,7 @@
 
 {% if q %}
 <div class="category">
-    <h1> {{ q }} </h1>
+    <h1> {{ q |capfirst }} </h1>
     <p style="font-weight: bold; font-size: 20px;">
         {% with results.count as total_results %}
         Photos {{ total_results }}
