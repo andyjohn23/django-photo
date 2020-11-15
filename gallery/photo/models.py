@@ -16,3 +16,8 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        photo = cls.objects.filter(title__icontains=search_term)
+        return photo

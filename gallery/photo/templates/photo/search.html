@@ -1,0 +1,29 @@
+{%extends 'photo/base.html'%} 
+{% block content %}
+
+{% if q %}
+<h1 style="margin-top: 5%;">POsts containing {{ q }}</h1>
+<p>
+    {% with results.count as total_results %}
+    found {{ total_results }} result{{ total_results |pluralize}}
+    {% endwith %}
+</p>
+
+{% for photo in results %}
+
+<h5><a href="{{ photo.image.url }}">{{ photo.title }}</a></h5> 
+{% empty %}
+
+<p>No results found</p>
+
+{% endfor %}
+
+{% else %}
+
+<form method="GET" style="margin-top: 5%;">
+    {{ form.as_p }}
+    <input type="submit" value="search" class="btn btn-primary my-1">
+</form>
+
+{% endif %}
+{% endblock %}

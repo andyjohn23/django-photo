@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.shortcuts import render
 from .models import Image, Category
 from django.views.generic import ListView
+from .forms import ImageSearchForm
 
 # Create your views here.
 
@@ -29,3 +27,16 @@ def category(request):
         'category':category,
     }
     return context
+
+def image_search(request):
+    form = ImageSearchForm()
+    q = ''
+    results =[]
+
+    if 'q' in request.GET:
+        form = ImageSearchForm(request.GET)
+        if form.is_valid():
+            q = form.cleaned_data['q']
+            results = Image.objects.filter(title__contains=q)
+
+    return render(request, 'photo/search.html', {'form':form, 'q':q, 'results':results})

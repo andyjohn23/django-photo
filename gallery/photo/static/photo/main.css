@@ -55,7 +55,8 @@ body{
 .search-box {
   position: relative;
   width: 100%;
-  margin-right: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .search-box .search-box__input {
   outline: none;
