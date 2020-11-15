@@ -192,7 +192,7 @@ body {
 }
 .modal-dialog {
   max-width: 85vw;
-  height: 800px;
+  max-height: 3vh;
 }
 .modal-body img{
   width: 50vw;
@@ -201,6 +201,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.modal-body p{
+  font-size: 12px;
 }
 .modal-download-button button{
   width: 120px;
@@ -211,4 +214,24 @@ body {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: #F5F5F5;
+}
+.modal-header{
+  background-color: white;
+  border: none;
+  outline: none;
+}
+.modal-header p{
+  font-size: 14px;
+  font-weight: 200;
+  font-family: sans-serif;
+}
+.modal-header .date{
+  font-size: 12px;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+.modal-footer{
+  background-color: white;
+  border: none;
+  outline: none;
 }
