@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
     'photo.apps.PhotoConfig',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
