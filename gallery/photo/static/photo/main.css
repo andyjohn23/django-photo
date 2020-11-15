@@ -160,7 +160,7 @@ body {
 }
 
 #myImg:hover {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* The Modal (background) */
@@ -249,3 +249,16 @@ body {
     width: 100%;
   }
 }
+.img-wrapper a {
+    position: absolute;
+    margin-left: 20px;
+    top:15px;
+    display: none;
+  }
+  
+  .img-wrapper:hover a {
+    display: block;
+  }
+  .img-wrapper {
+    position: relative;
+  }
