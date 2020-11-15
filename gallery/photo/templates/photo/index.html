@@ -62,10 +62,10 @@
                         <p class="pl-3 pt-3">Category:<strong>{{ photo.category }}</strong></p>
                     </div>
                     <div class="modal-footer ">
-                        <div class="col-md-8">
-                            <input type="text" value="{{photo.image.url}}" id="{{photo.id}}.url">
+                        <div class="col-md-6">
+                            <input type="text" value="{{photo.image.url}}" value="{{photo.id}}.url" id="link">
                             <button type="button" data-toggle="modal" data-target="#staticBackdrop"
-                                onclick="copy('{{photo.id}}.url')"><i class="fa fa-share"
+                            onclick="linkFunction()"><i class="fa fa-share"
                                     aria-hidden="true"></i>&nbsp;Share</button>
                         </div>
                     </div>
