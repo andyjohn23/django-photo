@@ -26,7 +26,7 @@
 
     <div class="container-fluid gallery">
         {% for photo in photos %}
-        <div class="box img-wrapper" data-toggle="modal" data-target="#staticBackdrop{{photo.id}}">
+        <div class="box img-wrapper" data-toggle="modal" data-target="#image{{photo.id}}">
             <img src="{{photo.image.url}}" alt="photo" id="myImg">
             <a href="{{ photo.image.url }}" download="{{ photo.id }}">
                 <div class="add-btn" title="Download photo">
@@ -35,13 +35,20 @@
             </a>
         </div>
 
-        <div class="modal fade" id="staticBackdrop{{photo.id}}" data-backdrop="static" data-keyboard="false"
-            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="image{{photo.id}}" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="col-md-12">
-                            <h5 class="modal-title" id="staticBackdropLabel">{{photo.name}}</h5>
+                        <div class="col-md-6">
+                            <a href="{{ photo.image.url }}" download="{{ photo.id }}">
+                                <div class="modal-download-button" title="Download photo">
+                                    <button>Download</i></button>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-6">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -49,10 +56,8 @@
                     </div>
 
                     <div class="modal-body">
-                        <img src="{{photo.image.url}}" class="img-responsive" alt="Image"
-                            style="width: 450px; height: 400px;">
-
-                        <h4 class="pl-3 pt-3">Category:<strong>{{photo.category}}</strong></h4>
+                        <img src="{{photo.image.url}}" class="img-fluid" alt="photo">
+                        <p class="pl-3 pt-3">Category:<strong>{{photo.category}}</strong></p>
                     </div>
                     <div class="modal-footer row">
                         <div class="col-md-9">

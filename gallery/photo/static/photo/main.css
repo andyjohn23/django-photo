@@ -190,3 +190,25 @@ body {
   width: 1000px;
   height: 500px;
 }
+.modal-dialog {
+  max-width: 85vw;
+  height: 800px;
+}
+.modal-body img{
+  width: 50vw;
+  height: 55vh;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-download-button button{
+  width: 120px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 200;
+  font-family: sans-serif;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
