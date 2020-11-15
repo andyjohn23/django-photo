@@ -250,15 +250,26 @@ body {
   }
 }
 .img-wrapper a {
-    position: absolute;
-    margin-left: 20px;
-    top:15px;
-    display: none;
-  }
-  
-  .img-wrapper:hover a {
-    display: block;
-  }
-  .img-wrapper {
-    position: relative;
-  }
+  position: absolute;
+  margin-left: 20px;
+  top: 15px;
+  display: none;
+}
+.img-wrapper:hover a {
+  display: block;
+}
+.img-wrapper {
+  position: relative;
+}
+.add-btn i{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.add-btn button{
+    background-color: white;
+    width: 40px;
+    height: 30px;
+    outline: none;
+    border: none;
+}
