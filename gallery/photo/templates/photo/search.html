@@ -1,22 +1,29 @@
-{%extends 'photo/base.html'%} 
+{%extends 'photo/base.html'%}
 {% block content %}
 
+
 {% if q %}
-<h1 style="margin-top: 5%;">POsts containing {{ q }}</h1>
-<p>
-    {% with results.count as total_results %}
-    found {{ total_results }} result{{ total_results |pluralize}}
-    {% endwith %}
-</p>
+<div class="category">
+    <h1> {{ q }} </h1>
+    <p style="font-weight: bold; font-size: 20px;">
+        {% with results.count as total_results %}
+        Photos {{ total_results }}
+        {% endwith %}
+    </p>
+</div>
 
-{% for photo in results %}
+<div class="container-fluid gallery">
+    {% for photo in results %}
+    <div class="box">
+        <img src="{{photo.image.url}}" alt="photo">
+    </div>
 
-<h5><a href="{{ photo.image.url }}">{{ photo.title }}</a></h5> 
-{% empty %}
+    {% empty %}
 
-<p>No results found</p>
+    <p>No results found</p>
 
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% else %}
 
