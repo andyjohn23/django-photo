@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Image, Category
 from django.views.generic import ListView
 from .forms import ImageSearchForm
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -41,3 +42,4 @@ def image_search(request):
             results = Image.objects.filter(title__search=q)
 
     return render(request, 'photo/search.html', {'form':form, 'q':q, 'results':results})
+

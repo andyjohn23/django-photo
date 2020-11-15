@@ -28,7 +28,7 @@
         {% for photo in photos %}
         <div class="box img-wrapper">
             <img src="{{photo.image.url}}" alt="photo" id="myImg">
-            <a href="#">
+            <a href="{{ photo.image.url }}" download="{{ photo.id }}">
                 <div class="add-btn" title="Download photo">
                     <button><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
                 </div>
