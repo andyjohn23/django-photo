@@ -33,7 +33,7 @@ To clone the project:
    ```
    
 ## BEHAVIOUR DRIVEN DEVELOPMENT
-1. Users get to search, download and share photos.
+1. Users get to search, download and share photos
 
 
 ## TECHNOLOGY USED
