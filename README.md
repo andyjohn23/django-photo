@@ -43,7 +43,7 @@ To clone the project:
 1. Heroku
 1. Python3.6.9
 
-## CONTACT INFROMATION
+## CONTACT INFORMATION
 For any concern about the application you can contact me through (andrewnick906@gmail.com)
 
 ## LICENSE
