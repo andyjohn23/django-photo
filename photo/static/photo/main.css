@@ -51,7 +51,6 @@ body {
   pointer-events: none;
   color: #aaa;
 }
-
 .search-box {
   position: relative;
   width: 100%;
@@ -152,7 +151,6 @@ body {
 }
 .cat-link {
   display: flex;
-  flex-direction: row;
   gap: 20px;
 }
 #myImg {
@@ -251,4 +249,94 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 12px;
   margin-left: 0px;
+}
+/* smaller phones media query */
+@media screen and (min-device-width: 280px) and (max-device-width: 653px) {
+  .body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .cat-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery {
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 1;
+    column-gap: 10px;
+  }
+}
+/* small phones media query */
+@media screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  .body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .cat-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery {
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 1;
+    column-gap: 10px;
+  }
+}
+/* iphone x media query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px){
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .cat-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery {
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 1;
+    column-gap: 10px;
+  }
+}
+/* ipad media query */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .cat-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gallery {
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 2;
+    column-gap: 10px;
+  }
+}
+/* ipad pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .cat-link {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .gallery {
+    margin-top: 3rem;
+    width: 100vw;
+    columns: 3;
+    column-gap: 10px;
+  }
 }
